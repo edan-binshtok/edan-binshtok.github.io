@@ -1,16 +1,30 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Madron</title>
-  <base href="https://edan-binshtok.github.io/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="manifest" href="manifest.webmanifest">
-  <meta name="theme-color" content="#1976d2">
+    <meta charset="utf-8">
+    <title>Madron</title>
+    <base href="https://edan-binshtok.github.io/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#1976d2">
 <link rel="stylesheet" href="styles.3ff695c00d717f2d2a11.css"></head>
 <body>
-  <app-root></app-root>
-  <noscript>Please enable JavaScript to continue using this application.</noscript>
+<script>
+    (function () {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+            history.replaceState(null, null, redirect);
+            // REMOVE THIS - just showing the redirect route in the UI
+            document.body.setAttribute('message', 'This page was redirected by 404.html, from the route: ' + redirect);
+        } else {
+            // REMOVE THIS - just showing the redirect route in the UI
+            document.body.setAttribute('message', 'This page was loaded directly from the index.html file');
+        }
+    })();
+</script>
+<app-root></app-root>
+<noscript>Please enable JavaScript to continue using this application.</noscript>
 <script src="runtime-es2015.b2aca5be9e7b8cc1a1b4.js" type="module"></script><script src="polyfills-es2015.707fe33a73ba6b994c2b.js" type="module"></script><script src="runtime-es5.a6586930f507951256e4.js" nomodule defer></script><script src="polyfills-es5.57490e75af362c0d08fd.js" nomodule defer></script><script src="main-es2015.f86487654e16fa82228f.js" type="module"></script><script src="main-es5.c204fa49c939fcf2e849.js" nomodule defer></script></body>
 </html>
