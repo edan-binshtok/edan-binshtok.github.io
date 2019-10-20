@@ -1,0 +1,16 @@
+
+<div *ngIf="afAuth.user | async as user; else showLogin">
+  <h1 class="mat-elevation-z6">{{title}}</h1>
+  <h3>Hello {{ user.displayName }}!</h3>
+  <button color="primary" (click)="logout()">Logout</button>
+  <nav>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/heroes">Equipment</a>
+  </nav>
+  <router-outlet></router-outlet>
+  <app-messages></app-messages>
+</div>
+<ng-template #showLogin>
+  <p>Please login.</p>
+  <button (click)="login()">Login with Google</button>
+</ng-template>
