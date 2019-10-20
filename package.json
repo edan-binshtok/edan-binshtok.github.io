@@ -10,7 +10,7 @@
     "build": "ng build --prod",
     "e2e": "ng e2e",
     "ng": "ng",
-    "deploy": "npm run github/deploy",
+    "deploy": "ng build; angular-cli-ghpages -b master",
     "github/deploy": "ng deploy",
     "firebase/rules": "firebase deploy --only firestore:rules",
     "firebase/serve": "firebase serve --only hosting",
