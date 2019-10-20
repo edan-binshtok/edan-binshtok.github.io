@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css?family=Walter+Turncoat');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import "~@angular/material/prebuilt-themes/purple-green.css";
+
+body {
+    margin: 0;
+    background: #303030;
+    color: #fff;
+}
+
+html, body { height: 100%; }
+
+/* everywhere else */
+* {
+    font-family: 'Walter Turncoat', cursive, Arial, Helvetica, sans-serif;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
