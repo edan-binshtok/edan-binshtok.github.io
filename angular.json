@@ -120,7 +120,11 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "repo": "git@github.com:edan-binshtok/edan-binshtok.github.io.git",
+            "branch": "master"
+          }
         }
       }
     }
