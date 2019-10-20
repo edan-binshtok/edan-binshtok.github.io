@@ -15,6 +15,14 @@ export class HeroService {
         return this.afs.collection<Hero>(`heroes`).snapshotChanges().pipe(
             map(heroesSnapshot => heroesSnapshot.map(heroSnapshot => {
                 return {id: heroSnapshot.payload.doc.id, ...heroSnapshot.payload.doc.data() as Hero};
+            }).sort((a, b) => {
+                if (a.name < b.name) {
+                    return -1;
+                }
+                if (a.name > b.name) {
+                    return 1;
+                }
+                return 0;
             }))
         );
     }
